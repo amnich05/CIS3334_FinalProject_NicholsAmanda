@@ -1,5 +1,9 @@
 package edu.css.amanda.cis3334_finalproject_nicholsamanda;
 
+/**
+ * Created by Amanda Nichols on 4/29/2018
+ */
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
