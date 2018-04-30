@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Big Day!</string>
+    <string name="nav_header_subtitle">A wedding organizer to help keep track of the little details for your BIG day!</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_checklist">Checklist</string>
+    <string name="nav_guestList">Guest List Manager</string>
+    <string name="nav_vision">Wedding Vision</string>
+    <string name="nav_settings">View Account Settings</string>
+    <string name="action_home">Home</string>
+    <string name="action_checklist">Preparation Checklist</string>
+    <string name="action_guestList">Guest List Manager</string>
+    <string name="action_vision">Wedding Vision</string>
+    <string name="action_settings">View Account Settings</string>
+    <string name="title">Big Day!</string>
+    <string name="subtitle">A Wedding Organizer</string>
+
+</resources>
