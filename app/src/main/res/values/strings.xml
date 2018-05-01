@@ -19,5 +19,6 @@
     <string name="subtitle">A Wedding Organizer</string>
     <string name="welcome_subtitle">A Wedding Organizer to help keep track of the little details for your BIG day!</string>
     <string name="line_break">X O X O X O X O X O X O X O X O X O X O X O X O X O</string>
+    <string name="and">&amp;</string>
 
 </resources>

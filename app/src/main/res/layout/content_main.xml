@@ -13,6 +13,10 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +24,10 @@
         android:text="@string/title"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Display2"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         tools:textAlignment="center"
-        tools:textColor="@color/colorTitle" />
+        tools:textColor="@color/colorPrimary"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -31,9 +37,10 @@
         android:text="@string/subtitle"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
-        android:textColor="@color/colorSubtitle"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
         tools:textAlignment="center"
-        tools:textColor="@color/colorSubtitle" />
+        tools:textColor="@color/colorAccent" />
 
     <Space
         android:layout_width="match_parent"
@@ -43,10 +50,11 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:letterSpacing="05"
         android:text="@string/line_break"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Caption"
+        android:textStyle="bold"
+        android:textColor="@color/colorLineBreak"
         tools:textColor="@color/colorLineBreak" />
 
 </LinearLayout>

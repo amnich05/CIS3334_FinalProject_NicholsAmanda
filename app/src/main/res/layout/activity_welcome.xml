@@ -35,8 +35,8 @@
         android:fontFamily="cursive"
         android:text="@string/title"
         android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.Material.Display2"
-        android:textColor="@color/colorTitle"
+        android:textAppearance="@android:style/TextAppearance.Material.Display3"
+        android:textColor="@color/colorPrimary"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="36dp" />
 
@@ -48,7 +48,7 @@
         android:text="@string/welcome_subtitle"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
-        android:textColor="@color/colorSubtitle"
+        android:textColor="@color/colorAccent"
         android:textStyle="italic" />
 
     <Space
@@ -73,7 +73,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="log in" />
+        android:text="log in"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
@@ -90,5 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="create an account" />
+        android:text="create an account"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 </LinearLayout>
