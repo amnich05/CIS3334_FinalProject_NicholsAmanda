@@ -17,8 +17,21 @@
     <string name="action_settings">View Account Settings</string>
     <string name="title">Big Day!</string>
     <string name="subtitle">A Wedding Organizer</string>
-    <string name="welcome_subtitle">A Wedding Organizer to help keep track of the little details for your BIG day!</string>
+    <string name="welcome_subtitle">A stress~free Wedding Organizer to help keep track of the little details for your BIG Day!</string>
     <string name="line_break">X O X O X O X O X O X O X O X O X O X O X O X O X O</string>
     <string name="and">&amp;</string>
+    <string name="countdown">Days until you tie the knot:</string>
+    <string name="vision">Your Wedding Vision:</string>
+    <string name="visionColor">Colors:</string>
+    <string name="visionSetting">Setting:</string>
+    <string name="visionBudget">Budget:</string>
+    <string name="welcomeLogin">Please log in to start planning your Big Day!</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="button_login">Log in</string>
+    <string name="newWelcome">Welcome!</string>
+    <string name="newGreeting">Create an account before we begin planning your Big Day!</string>
+    <string name="createAccount">Create Account</string>
+    <string name="password_create">Password: (minimum 6 characters)</string>
 
 </resources>

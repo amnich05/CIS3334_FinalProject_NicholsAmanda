@@ -27,7 +27,7 @@
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         tools:textAlignment="center"
-        tools:textColor="@color/colorPrimary"/>
+        tools:textColor="@color/colorPrimary" />
 
     <TextView
         android:layout_width="match_parent"
@@ -47,14 +47,131 @@
         android:layout_height="5dp" />
 
     <TextView
-        android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/line_break"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.Material.Caption"
-        android:textStyle="bold"
         android:textColor="@color/colorLineBreak"
+        android:textStyle="bold"
         tools:textColor="@color/colorLineBreak" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="31dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="7"
+            android:fontFamily="casual"
+            android:text="@string/countdown"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+        <TextView
+            android:id="@+id/textViewCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:fontFamily="casual"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:text="@string/vision"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="casual"
+                android:paddingEnd="0dp"
+                android:paddingStart="20dp"
+                android:text="@string/visionColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewVisionColors"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:fontFamily="cursive"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="casual"
+                android:paddingEnd="0dp"
+                android:paddingStart="20dp"
+                android:text="@string/visionSetting"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewVisionSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:fontFamily="cursive"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="casual"
+                android:paddingEnd="0dp"
+                android:paddingStart="20dp"
+                android:text="@string/visionBudget"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewVisionBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:fontFamily="cursive"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
