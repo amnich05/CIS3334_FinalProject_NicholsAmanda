@@ -45,7 +45,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // when Create Account button is clicked, get user email and password
                 createAccount(etCreateEmail.getText().toString(), etCreatePassword.getText().toString());
-                startActivity(new Intent(CreateAccountActivity.this, MainActivity.class));
+                startActivity(new Intent(CreateAccountActivity.this, NewVisionActivity.class));
             }
         });
     }

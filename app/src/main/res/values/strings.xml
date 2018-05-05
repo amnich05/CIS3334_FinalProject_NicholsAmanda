@@ -10,17 +10,19 @@
     <string name="nav_guestList">Guest List Manager</string>
     <string name="nav_vision">Wedding Vision</string>
     <string name="nav_settings">View Account Settings</string>
+    <string name="nav_sign_out">Sign Out</string>
     <string name="action_home">Home</string>
     <string name="action_checklist">Preparation Checklist</string>
     <string name="action_guestList">Guest List Manager</string>
     <string name="action_vision">Wedding Vision</string>
     <string name="action_settings">View Account Settings</string>
+    <string name="action_sign_out">Sign Out</string>
     <string name="title">Big Day!</string>
     <string name="subtitle">A Wedding Organizer</string>
     <string name="welcome_subtitle">A stress~free Wedding Organizer to help keep track of the little details for your BIG Day!</string>
     <string name="line_break">X O X O X O X O X O X O X O X O X O X O X O X O X O</string>
     <string name="and">&amp;</string>
-    <string name="countdown">Days until you tie the knot:</string>
+    <string name="countdown">Days until you tie the knot!</string>
     <string name="vision">Your Wedding Vision:</string>
     <string name="visionColor">Colors:</string>
     <string name="visionSetting">Setting:</string>
@@ -33,5 +35,18 @@
     <string name="newGreeting">Create an account before we begin planning your Big Day!</string>
     <string name="createAccount">Create Account</string>
     <string name="password_create">Password: (minimum 6 characters)</string>
+    <string name="vision_intro">Please answer a few questions about your Big Day to help create your Wedding Vision!</string>
+    <string name="question_date">When is your Big Day?</string>
+    <string name="input_month">mm</string>
+    <string name="input_day">dd</string>
+    <string name="input_year">yyyy</string>
+    <string name="question_color">What is your color scheme?</string>
+    <string name="hint_color">(first color, second color, etc.)</string>
+    <string name="question_setting">What is your ideal wedding setting?</string>
+    <string name="hint_setting">(beach, church, country, outdoors, etc.)</string>
+    <string name="question_budget">What is your budget?</string>
+    <string name="dollar_sign">$</string>
+    <string name="hint_budget">00.00</string>
+    <string name="button_newVision">Generate Wedding Organizer</string>
 
 </resources>

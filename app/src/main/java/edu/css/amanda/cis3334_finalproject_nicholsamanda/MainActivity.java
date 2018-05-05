@@ -29,10 +29,15 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private TextView tvWeddingDate;
     private TextView tvCountdown;
     private TextView tvVisionColors;
     private TextView tvVisionSetting;
     private TextView tvVisionBudget;
+
+    private TextView tvCDay;
+    private TextView tvWDay;
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -53,10 +58,31 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvCDay = (TextView) findViewById(R.id.textViewCDay);
+        int cday = NewVisionActivity.cDayOfYear;
+        tvCDay.setText(Integer.toString(cday));
+
+        tvWDay = (TextView) findViewById(R.id.textViewWDay);
+        int wday = NewVisionActivity.wDayOfYear;
+        tvWDay.setText(Integer.toString(wday));
+
+        tvWeddingDate = (TextView) findViewById(R.id.textViewWeddingDate);
+        tvWeddingDate.setText(NewVisionActivity.newWeddingDate);
+
         tvCountdown = (TextView) findViewById(R.id.textViewCountdown);
+        int cd = NewVisionActivity.countdown;
+        tvCountdown.setText(Integer.toString(cd));
+
+
         tvVisionColors = (TextView) findViewById(R.id.textViewVisionColors);
+        tvVisionColors.setText(NewVisionActivity.newWeddingColors);
+
         tvVisionSetting = (TextView) findViewById(R.id.textViewVisionSetting);
+        tvVisionSetting.setText(NewVisionActivity.newWeddingSetting);
+
         tvVisionBudget = (TextView) findViewById(R.id.textViewVisionBudget);
+        tvVisionBudget.setText(NewVisionActivity.newWeddingBudget);
+
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() { //initialized mAuthListener
             @Override
@@ -130,16 +156,19 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the home action
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
         } else if (id == R.id.nav_checklist) {
 
         } else if (id == R.id.nav_guestList) {
 
         } else if (id == R.id.nav_vision) {
-
+            startActivity(new Intent(MainActivity.this, NewVisionActivity.class));
         } else if (id == R.id.nav_settings) {
 
-
+        } else if (id == R.id.nav_sign_out) {
+            startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
