@@ -77,7 +77,7 @@
 
         <TextView
             android:id="@+id/textViewCountdown"
-            android:layout_width="wrap_content"
+            android:layout_width="63dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:fontFamily="casual"
@@ -118,20 +118,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight=".8"
                 android:fontFamily="casual"
-                android:paddingEnd="0dp"
+                android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/visionColor"
+                android:textAlignment="textStart"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewVisionColors"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="1"
                 android:fontFamily="cursive"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -143,20 +144,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight=".6"
                 android:fontFamily="casual"
-                android:paddingEnd="0dp"
+                android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/visionSetting"
+                android:textAlignment="textStart"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewVisionSetting"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="1"
                 android:fontFamily="cursive"
                 android:textSize="24sp" />
 
@@ -169,20 +171,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight=".6"
                 android:fontFamily="casual"
-                android:paddingEnd="0dp"
+                android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/visionBudget"
+                android:textAlignment="textStart"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewVisionBudget"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="1"
                 android:fontFamily="cursive"
                 android:textSize="24sp" />
 
@@ -192,11 +195,13 @@
     <TextView
         android:id="@+id/textViewCDay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/textViewWDay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
 </LinearLayout>
