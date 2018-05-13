@@ -8,11 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.TimeZone;
 
 public class NewVisionActivity extends AppCompatActivity {
 
@@ -50,10 +47,8 @@ public class NewVisionActivity extends AppCompatActivity {
         etNewMonth = (EditText) findViewById(R.id.editTextNewMonth);
 
         etNewDay = (EditText) findViewById(R.id.editTextNewDay);
-        //int day = Integer.parseInt(etNewDay.getText().toString());
 
         etNewYear = (EditText) findViewById(R.id.editTextNewYear);
-        //int year = Integer.parseInt(etNewYear.getText().toString());
 
         etNewColor = (EditText) findViewById(R.id.editTextNewColor);
 
@@ -106,8 +101,6 @@ public class NewVisionActivity extends AppCompatActivity {
                     default: month = "Invalid Month";
                         break;
                 }
-
-                //month = etNewMonth.getText().toString();
                 day = etNewDay.getText().toString();
                 year = etNewYear.getText().toString();
                 newWeddingDate = month + " " + day + ", " + year;
@@ -120,43 +113,15 @@ public class NewVisionActivity extends AppCompatActivity {
 
                 budget = etNewBudget.getText().toString();
                 newWeddingBudget = budget;
-
-
-
-
             }
         });
-
-        //countdown = WeddingCalculator(year, month, day);
     }
-/*
-    public static int WeddingCalculator(int y, int m, int d) {
-        Calendar today = Calendar .now();
-        int wDayOfYear, cDayOfYear;
-        int daysUntilWedding;
 
-        LocalDate birthday = LocalDate.of(y, m, d);
-        wDayOfYear = birthday.getDayOfYear();
-        cDayOfYear = today.getDayOfYear();
-
-        if (cDayOfYear <= wDayOfYear)
-        {
-            daysUntilWedding = (wDayOfYear - cDayOfYear);
-            return daysUntilWedding;
-        }
-        else
-        {
-            daysUntilWedding = ((DAYS_IN_YEAR - cDayOfYear) + wDayOfYear);
-            return daysUntilWedding;
-        }
-    }
-*/
 
 public static int WeddingCalculator(int y, int m, int d) throws ParseException {
     Calendar calendar = Calendar.getInstance();
     GregorianCalendar gc = new GregorianCalendar();
 
-    //int wDayOfYear, cDayOfYear;
     int daysUntilWedding;
 
     cDayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
@@ -176,18 +141,6 @@ public static int WeddingCalculator(int y, int m, int d) throws ParseException {
         daysUntilWedding = ((DAYS_IN_YEAR - cDayOfYear) + wDayOfYear);
         return daysUntilWedding;
     }
-
-    //String input = m + "," + d + "," + y;
-    //SimpleDateFormat format = new SimpleDateFormat("MM,dd,yyy");
-
-
-
-
-    //SimpleDateFormat newWeddingDay = new SimpleDateFormat("dd");
-    //SimpleDateFormat newWeddingMonth = new SimpleDateFormat("MM");
-    //SimpleDateFormat newWeddingYear = new SimpleDateFormat("yyyy");
-
-
 }
 
 }

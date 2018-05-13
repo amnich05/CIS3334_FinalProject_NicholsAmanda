@@ -7,10 +7,7 @@ package edu.css.amanda.cis3334_finalproject_nicholsamanda;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -24,19 +21,14 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView tvWeddingDate;
     private TextView tvCountdown;
-    private TextView tvVisionColors;
+    public TextView tvVisionColors;
     private TextView tvVisionSetting;
     private TextView tvVisionBudget;
-
-    private TextView tvCDay;
-    private TextView tvWDay;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -57,14 +49,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        tvCDay = (TextView) findViewById(R.id.textViewCDay);
-        int cday = NewVisionActivity.cDayOfYear;
-        tvCDay.setText(Integer.toString(cday));
-
-        tvWDay = (TextView) findViewById(R.id.textViewWDay);
-        int wday = NewVisionActivity.wDayOfYear;
-        tvWDay.setText(Integer.toString(wday));
 
         tvWeddingDate = (TextView) findViewById(R.id.textViewWeddingDate);
         tvWeddingDate.setText(NewVisionActivity.newWeddingDate);
@@ -148,6 +132,14 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Sign out the user
+     */
+    private void signOut () {
+        // sign user out of database and application
+        mAuth.signOut();
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -162,10 +154,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_guestList) {
 
         } else if (id == R.id.nav_vision) {
-            startActivity(new Intent(MainActivity.this, NewVisionActivity.class));
+            startActivity(new Intent(MainActivity.this, VisionActivity.class));
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_sign_out) {
+            signOut();
             startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
         }
 

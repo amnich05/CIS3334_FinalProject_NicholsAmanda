@@ -32,6 +32,8 @@
     <string name="password">Password:</string>
     <string name="button_login">Log in</string>
     <string name="newWelcome">Welcome!</string>
+    <string name="hello">Hello, again!</string>
+    <string name="editVision">Need to update your Vision? You are in the right place!</string>
     <string name="newGreeting">Create an account before we begin planning your Big Day!</string>
     <string name="createAccount">Create Account</string>
     <string name="password_create">Password: (minimum 6 characters)</string>
@@ -48,5 +50,6 @@
     <string name="dollar_sign">$</string>
     <string name="hint_budget">00.00</string>
     <string name="button_newVision">Generate Wedding Organizer</string>
+    <string name="button_updateVision">Update Your Vision</string>
 
 </resources>
