@@ -1,5 +1,9 @@
 package edu.css.amanda.cis3334_finalproject_nicholsamanda;
 
+/**
+ * Created by Amanda Nichols
+ */
+
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +28,11 @@ public class CreateAccountActivity extends AppCompatActivity {
     private Button buttonCreateLogin;
     private FirebaseAuth mAuth;
 
+    /**
+     * Create the mobile application
+     * User will be able to create an account
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

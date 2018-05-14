@@ -1,5 +1,9 @@
 package edu.css.amanda.cis3334_finalproject_nicholsamanda;
 
+/**
+ * Created by Amanda Nichols
+ */
+
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -17,13 +21,19 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     /**
-     * Declare EditText, Button variables
+     * Declare EditText, Button, and FirebaseAuth variables
      */
     private EditText etEmail;
     private EditText etPassword;
     private Button buttonLogin;
     private FirebaseAuth mAuth;
 
+    /**
+     * Create the activity
+     * User will be able to enter logon information
+     * Validate logon and send user to MainActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

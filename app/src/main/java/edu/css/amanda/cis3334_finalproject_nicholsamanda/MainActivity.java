@@ -1,7 +1,10 @@
 package edu.css.amanda.cis3334_finalproject_nicholsamanda;
 
 /**
- * Created by Amanda Nichols on 4/29/2018
+ * Created by Amanda Nichols
+ * Date: April 29, 2018
+ * Subject: CIS3334 Mobile Device Programming
+ * Final Project
  */
 
 import android.content.Intent;
@@ -24,6 +27,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    /**
+     * Declare TextView and FirebaseAuth variables
+     */
     private TextView tvWeddingDate;
     private TextView tvCountdown;
     public TextView tvVisionColors;
@@ -34,22 +40,37 @@ public class MainActivity extends AppCompatActivity
     private FirebaseAuth.AuthStateListener mAuthListener;
 
 
+    /**
+     * Create the activity
+     * This is the main activity shown after the user logs in
+     * or after the user creates an account and completes NewVisionActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // initialize and set up the toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // initialize and set up the navigation drawer
+        // the navigation drawer will toggle opened and closed
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        // initialize and set up the navigation view
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        /**
+         * Initialize variables
+         * Set text to the user input gathered from NewVisionActivity
+         */
         tvWeddingDate = (TextView) findViewById(R.id.textViewWeddingDate);
         tvWeddingDate.setText(NewVisionActivity.newWeddingDate);
 
@@ -67,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         tvVisionBudget = (TextView) findViewById(R.id.textViewVisionBudget);
         tvVisionBudget.setText(NewVisionActivity.newWeddingBudget);
 
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance(); // start Firebase
         mAuthListener = new FirebaseAuth.AuthStateListener() { //initialized mAuthListener
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -94,22 +115,34 @@ public class MainActivity extends AppCompatActivity
         mAuth.addAuthStateListener(mAuthListener);
     }
 
+    /**
+     * When the application closes,
+     * stop Firebase mAuthListener
+     */
     @Override
     public void onStop() {
         super.onStop();
         mAuth.removeAuthStateListener(mAuthListener);
     }
 
+    /**
+     * What to do with the navigation drawer if the back button is pressed
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        if (drawer.isDrawerOpen(GravityCompat.START)) { // if the drawer is open, close the drawer
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            super.onBackPressed(); // go back
         }
     }
 
+    /**
+     * Creates and inflates the options menu bar
+     * @param menu
+     * @return true
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -117,6 +150,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Handles what to do once an item in the menu bar is selected or clicked
+     * @param item
+     * @return true
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -140,6 +178,12 @@ public class MainActivity extends AppCompatActivity
         mAuth.signOut();
     }
 
+    /**
+     * Handles the items in the Navigation Drawer
+     * and the action they perform when selected or clicked
+     * @param item
+     * @return true
+     */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -147,22 +191,23 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the home action
+            // Handle the home action, go to MainActivity
             startActivity(new Intent(MainActivity.this, MainActivity.class));
         } else if (id == R.id.nav_checklist) {
-
+            // Handle the checklist action, not in use
         } else if (id == R.id.nav_guestList) {
-
+            // Handle the guestList action, not in use
         } else if (id == R.id.nav_vision) {
+            // Handle the vision action, go to VisionActivity
             startActivity(new Intent(MainActivity.this, VisionActivity.class));
         } else if (id == R.id.nav_settings) {
-
+            // Handle the settings action, not in use
         } else if (id == R.id.nav_sign_out) {
+            // sign the user out of the application, go to WelcomeActivity
             signOut();
             startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
         }
-
-
+        // close the drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
